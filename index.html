@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<title>Geta API demo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			font-family: sans-serif;
+		}
+		.app__find-form__input {
+			width: 48%;
+		}
+		.app__trip {
+			margin: 10px auto;
+		}
+	</style>
+</head>
+<body class="app">
+	<h1 class="app__header">BlaBlaCar trip finder</h1>
+	<section class="app__section">
+		<form class="app__find-form" method="get" action="/">
+			<fieldset>
+				<legend>Destination:</legend>
+				<label><input autofocus class="app__find-form__input js_from" type="text" placeholder="From"></label>
+				<label><input class="app__find-form__input js_to" type="text" placeholder="To"></label>
+				<button hidden></button>
+			</fieldset>
+		</form>
+		<h2 class="app__section_header">Upcoming trips:</h2>
+		<ul class="app__section_body app__trips js_trips">
+			<li class="app__trip">
+				Here will appear upcoming trips.
+			</li>
+		</ul>
+	</section>
+
+	<template id="template-trip">
+		<li class="app__trip"></li>
+	</template>
+
+	<script src="app.settings.js"></script>
+	<script src="app.presenter.js"></script>
+	<script src="app.trip.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
